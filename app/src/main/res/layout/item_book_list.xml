@@ -50,35 +50,68 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/text_author"
-                style="@style/title"
+            <TableLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/book_author"
                 app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_title" />
+                app:layout_constraintTop_toBottomOf="@+id/text_title">
 
-            <TextView
-                android:id="@+id/text_publisher"
-                style="@style/title"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/book_publisher"
-                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_author" />
+                <TableRow>
 
-            <TextView
-                android:id="@+id/text_price"
-                style="@style/title"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/book_price"
-                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_publisher" />
+                    <TextView
+                        android:id="@+id/text_author"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_author" />
+
+                    <TextView
+                        android:id="@+id/text_authors"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:maxLines="2"
+                        app:authorsTitle="@{document.authors}" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/text_publisher"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_publisher" />
+
+                    <TextView
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@{document.publisher}" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/book_price" />
+
+                    <TextView
+                        android:id="@+id/text_price"
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        app:salePrice="@{document.sale_price}" />
+
+                </TableRow>
+
+            </TableLayout>
 
             <ImageView
                 android:layout_width="50dp"

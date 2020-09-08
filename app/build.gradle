@@ -76,6 +76,8 @@ dependencies {
     //paging
     implementation "androidx.paging:paging-runtime-ktx:$androix_paging_version"
 
+    implementation "androidx.viewpager2:viewpager2:$androidx_viewPager_version"
+
     // hilt
     implementation "com.google.dagger:hilt-android:2.28-alpha"
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02'

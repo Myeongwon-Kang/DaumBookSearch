@@ -1,6 +1,9 @@
 package com.kang6264.daumbooksearch.data.response
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class BookDocument(
     val authors: List<String>,
     val contents: String,
@@ -14,4 +17,4 @@ data class BookDocument(
     val title: String,
     val translators: List<String>,
     val url: String
-)
+) : Parcelable
