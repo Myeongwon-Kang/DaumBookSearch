@@ -2,16 +2,14 @@ package com.kang6264.daumbooksearch.presentation.ui.search
 
 import android.content.Context
 import android.os.Bundle
-import android.text.Editable
 import android.view.View
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import com.kang6264.daumbooksearch.BR
 
 import com.kang6264.daumbooksearch.R
-import com.kang6264.daumbooksearch.base.BaseFragment
+import com.kang6264.daumbooksearch.presentation.base.BaseFragment
 import com.kang6264.daumbooksearch.data.response.BookDocument
 import com.kang6264.daumbooksearch.databinding.FragmentBookListBinding
 import dagger.hilt.android.AndroidEntryPoint

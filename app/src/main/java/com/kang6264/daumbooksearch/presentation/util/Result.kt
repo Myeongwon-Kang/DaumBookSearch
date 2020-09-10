@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.util
+package com.kang6264.daumbooksearch.presentation.util
 
 import java.lang.Exception
 
@@ -11,5 +11,5 @@ fun <T> Result<T>.successOr(fallback: T): T {
     return (this as? Result.Success<T>)?.data ?: fallback
 }
 
-val <T> Result<T>.data: T?
-    get() = (this as? Result.Success)?.data
+val <T> Result<T>.data: T
+    get() = (this as? Result.Success)!!.data

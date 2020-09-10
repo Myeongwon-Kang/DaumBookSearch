@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity(), BookListFragment.OnClickedListener {
         if (null == savedInstanceState) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, BookListFragment())
-                .addToBackStack(null)
                 .commit()
         }
     }

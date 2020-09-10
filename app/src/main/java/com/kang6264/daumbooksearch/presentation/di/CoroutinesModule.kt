@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.di
+package com.kang6264.daumbooksearch.presentation.di
 
 import dagger.Module
 import dagger.Provides

@@ -7,9 +7,10 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.DataSource
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.kang6264.daumbooksearch.base.BaseViewModel
+import com.kang6264.daumbooksearch.presentation.base.BaseViewModel
 import com.kang6264.daumbooksearch.data.response.BookDocument
 import com.kang6264.daumbooksearch.domain.repository.Repository
+import com.kang6264.daumbooksearch.domain.usecase.SearchBookUseCase
 import com.kang6264.daumbooksearch.pagingnation.PagingDataSource
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
@@ -19,11 +20,10 @@ import kotlinx.coroutines.flow.onEach
 
 @ExperimentalCoroutinesApi
 class BookListViewModel @ViewModelInject constructor(
-    private val repository: Repository
+    //private val repository: Repository
+    private val searchBookUseCase: SearchBookUseCase
 ) : BaseViewModel() {
     private val SEARCH_RESULT_LIMIT = 50
-
-    var showErrorLiveData = MutableLiveData<Boolean>()
 
     val queryChannel = ConflatedBroadcastChannel<String>()
     val booksLiveData = initSearchListLiveData()
@@ -47,7 +47,7 @@ class BookListViewModel @ViewModelInject constructor(
             override fun create(): DataSource<Int, BookDocument> {
                 return PagingDataSource(
                     queryChannel.valueOrNull ?: "",
-                    repository,
+                    searchBookUseCase,
                     viewModelScope
                 )
                     .also {
@@ -62,9 +62,5 @@ class BookListViewModel @ViewModelInject constructor(
 
     fun searchBook(query: String) {
         queryChannel.offer(query)
-    }
-
-    fun showErrorTitle(show: Boolean){
-        showErrorLiveData.value = show
     }
 }

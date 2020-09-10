@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.base
+package com.kang6264.daumbooksearch.presentation.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

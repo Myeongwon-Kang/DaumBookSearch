@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.base
+package com.kang6264.daumbooksearch.presentation.base
 
 import androidx.lifecycle.ViewModel
 

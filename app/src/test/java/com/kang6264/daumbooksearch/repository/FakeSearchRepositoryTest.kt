@@ -1,8 +1,6 @@
 package com.kang6264.daumbooksearch.repository
 
-import com.kang6264.daumbooksearch.data.datasource.RemoteDataSourceImpl
-import com.kang6264.daumbooksearch.data.repository.RepositoryImpl
-import com.kang6264.daumbooksearch.util.CoroutineTestRule
+import com.kang6264.daumbooksearch.presentation.util.CoroutineTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Rule

@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.kang6264.daumbooksearch.BR
 import com.kang6264.daumbooksearch.R
-import com.kang6264.daumbooksearch.base.BaseFragment
+import com.kang6264.daumbooksearch.presentation.base.BaseFragment
 import com.kang6264.daumbooksearch.databinding.FragmentBookDetailBinding
 
 class BookDetailFragment : BaseFragment<FragmentBookDetailBinding, BookDetailViewModel>() {

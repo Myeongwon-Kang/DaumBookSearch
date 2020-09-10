@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.util
+package com.kang6264.daumbooksearch.presentation.util
 
 import android.widget.ImageView
 import android.widget.TextView
@@ -37,8 +37,8 @@ fun bindDatetime(view: TextView, datetime: String?) {
     if (!datetime.isNullOrEmpty()) {
         view.text = DateUtil.convertDate(
             datetime,
-            com.kang6264.daumbooksearch.util.DateFormat.ISO8601,
-            com.kang6264.daumbooksearch.util.DateFormat.NORMAL
+            com.kang6264.daumbooksearch.presentation.util.DateFormat.ISO8601,
+            com.kang6264.daumbooksearch.presentation.util.DateFormat.NORMAL
         )
     }
 }

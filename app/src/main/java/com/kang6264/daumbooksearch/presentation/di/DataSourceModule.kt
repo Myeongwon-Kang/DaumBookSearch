@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.di
+package com.kang6264.daumbooksearch.presentation.di
 
 import com.kang6264.daumbooksearch.data.datasource.RemoteDataSource
 import com.kang6264.daumbooksearch.data.datasource.RemoteDataSourceImpl

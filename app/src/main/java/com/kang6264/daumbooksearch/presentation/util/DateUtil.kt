@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.util
+package com.kang6264.daumbooksearch.presentation.util
 
 import java.text.SimpleDateFormat
 import java.util.*
