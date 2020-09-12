@@ -14,6 +14,30 @@
 ## 과제수행 전략
 
 ### Package Structure
+```
+/com/kang6264
+│
+└── daumbooksearch   ---------> # project 
+    ├── data               ---------> # data layer
+        ├── api
+        ├── datasource
+        ├── repository
+        ├── response
+    ├── di               ---------> # dependency injection
+    ├── domain               ---------> # domain layer
+        ├── data
+        ├── repository
+        ├── usecase
+    ├── presentation               ---------> # presentation layer
+        ├── base
+        ├── pagingnation
+        ├── ui
+            ├── search
+                ├── detail
+                ├── home
+        ├── util
+    
+```
 
 ### Architecture
 ![screenshot_](https://user-images.githubusercontent.com/10939456/92988469-bf851400-f506-11ea-8c84-38345cabccef.png)
