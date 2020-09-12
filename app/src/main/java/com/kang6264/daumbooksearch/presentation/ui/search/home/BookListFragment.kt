@@ -52,6 +52,7 @@ class BookListFragment : BaseFragment<FragmentBookListBinding, BookListViewModel
 
         initUI()
         initSpinner()
+        initSearchBtn()
     }
 
     private fun subscribe(adapter: BookListAdapter) {
@@ -63,6 +64,20 @@ class BookListFragment : BaseFragment<FragmentBookListBinding, BookListViewModel
     private fun initUI() {
         binding.editSearch.doAfterTextChanged { text ->
             searchBook(text.toString())
+        }
+    }
+
+    private fun initSearchBtn() {
+        binding.btnSearch.setOnClickListener {
+            searchFromSpinner(
+                RequestParams(
+                    binding.editSearch.text.toString(),
+                    1,
+                    50,
+                    selectSearchSort(binding.spinnerSort.selectedItemPosition),
+                    selectSearchTarget(binding.spinnerTarget.selectedItemPosition),
+                )
+            )
         }
     }
 
@@ -113,7 +128,7 @@ class BookListFragment : BaseFragment<FragmentBookListBinding, BookListViewModel
                         1,
                         50,
                         selectSearchSort(p2),
-                        selectSearchTarget(spinner_target.selectedItemPosition)
+                        selectSearchTarget(binding.spinnerTarget.selectedItemPosition)
                     )
                 )
             }
@@ -138,7 +153,7 @@ class BookListFragment : BaseFragment<FragmentBookListBinding, BookListViewModel
                         binding.editSearch.text.toString(),
                         1,
                         50,
-                        selectSearchSort(spinner_sort.selectedItemPosition),
+                        selectSearchSort(binding.spinnerSort.selectedItemPosition),
                         selectSearchTarget(p2)
                     )
                 )

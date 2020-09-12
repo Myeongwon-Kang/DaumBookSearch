@@ -1,7 +1,7 @@
 package com.kang6264.daumbooksearch.domain.usecase
 
 import com.kang6264.daumbooksearch.data.response.BookResponse
-import com.kang6264.daumbooksearch.presentation.di.IoDispatcher
+import com.kang6264.daumbooksearch.di.IoDispatcher
 import com.kang6264.daumbooksearch.domain.data.RequestParams
 import com.kang6264.daumbooksearch.domain.repository.Repository
 import kotlinx.coroutines.CoroutineDispatcher
