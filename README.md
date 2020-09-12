@@ -18,23 +18,23 @@
 /com/kang6264
 │
 └── daumbooksearch   ---------> # project 
-    ├── data               ---------> # data layer
-        ├── api
-        ├── datasource
-        ├── repository
-        ├── response
-    ├── di               ---------> # dependency injection
-    ├── domain               ---------> # domain layer
-        ├── data
-        ├── repository
-        ├── usecase
-    ├── presentation               ---------> # presentation layer
+│   ├── data               ---------> # data layer
+│       ├── api
+│       ├── datasource
+│       ├── repository
+│       ├── response
+└── ├── di               ---------> # dependency injection
+└── ├── domain               ---------> # domain layer
+│       ├── data
+│       ├── repository
+│        ├── usecase
+└── ├── presentation               ---------> # presentation layer
         ├── base
         ├── pagingnation
         ├── ui
-            ├── search
-                ├── detail
-                ├── home
+        │   ├── search
+        │   │   ├── detail
+        │   │   ├── home
         ├── util
     
 ```
