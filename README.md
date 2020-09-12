@@ -17,4 +17,15 @@
 
 ### Architecture
 
-### 사용한 주요 라이브러리
+### Libraries
+- Kotlin
+- Dagger Hilt
+- Coroutine
+- MVVM
+- Clean Architecture
+- Repository Pattern
+- Glide
+- Retrofit
+- Android Support Library(KTX, Android Paging ... etc)
+- Gson
+
