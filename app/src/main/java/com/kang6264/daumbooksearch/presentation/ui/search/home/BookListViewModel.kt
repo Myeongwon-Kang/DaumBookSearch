@@ -12,10 +12,8 @@ import com.kang6264.daumbooksearch.data.response.BookDocument
 import com.kang6264.daumbooksearch.domain.data.RequestParams
 import com.kang6264.daumbooksearch.domain.usecase.SearchBookUseCase
 import com.kang6264.daumbooksearch.presentation.pagingnation.PagingDataSource
-import com.kang6264.daumbooksearch.presentation.ui.search.detail.CallActivityNavigator
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -30,8 +28,6 @@ class BookListViewModel @ViewModelInject constructor(
     val booksLiveData = initSearchListLiveData()
     private var _booksLiveData = MutableLiveData<PagingDataSource>()
     private lateinit var pagingDataSource: PagingDataSource
-
-    private lateinit var callActivityNavigator: CallActivityNavigator
 
     init {
         queryChannel.asFlow()
@@ -65,13 +61,5 @@ class BookListViewModel @ViewModelInject constructor(
 
     fun searchBook(requestParams: RequestParams) {
         queryChannel.offer(requestParams)
-    }
-
-    fun setNavigator(callActivityNavigator: CallActivityNavigator) {
-        this.callActivityNavigator = callActivityNavigator
-    }
-
-    fun callActivity() {
-        callActivityNavigator.callActivity()
     }
 }

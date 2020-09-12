@@ -8,6 +8,7 @@
     <string name="book_search">검색</string>
     <string name="book">도서</string>
     <string name="book_no_search_title">검색 결과가 없습니다.</string>
+    <string name="book_detail_toolbar_title">책 검색</string>
 
     <string name="author_format">%s 지음</string>
     <string name="sale_detail_price_format">%s원 (-%s)</string>
