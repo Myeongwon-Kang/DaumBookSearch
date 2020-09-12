@@ -59,3 +59,6 @@
 - Android Support Library(KTX, Android Paging ... etc)
 - Gson
 
+### Reference
+ - [ViewModel] (https://developer.android.com/topic/libraries/architecture/viewmodel)
+ - [Dagger Hilt] (https://developer.android.com/training/dependency-injection/hilt-android)
