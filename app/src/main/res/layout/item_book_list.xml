@@ -10,7 +10,7 @@
 
         <variable
             name="actionHander"
-            type="com.kang6264.daumbooksearch.presentation.ui.search.ActionHandler" />
+            type="com.kang6264.daumbooksearch.presentation.ui.search.home.ActionHandler" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

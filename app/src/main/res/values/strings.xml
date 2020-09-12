@@ -12,4 +12,16 @@
     <string name="author_format">%s 지음</string>
     <string name="sale_detail_price_format">%s원 (-%s)</string>
     <string name="sale_price_format">%s원</string>
+
+    <string-array name="search_sort">
+        <item>정확도순</item>
+        <item>최신순</item>
+    </string-array>
+
+    <string-array name="search_targer">
+        <item>제목</item>
+        <item>ISBN</item>
+        <item>출판사</item>
+        <item>인명</item>
+    </string-array>
 </resources>

@@ -1,18 +1,15 @@
-package com.kang6264.daumbooksearch.pagingnation
+package com.kang6264.daumbooksearch.presentation.pagingnation
 
-import android.util.Log
 import androidx.paging.PageKeyedDataSource
 import com.kang6264.daumbooksearch.data.response.BookDocument
-import com.kang6264.daumbooksearch.domain.data.Params
-import com.kang6264.daumbooksearch.domain.repository.Repository
+import com.kang6264.daumbooksearch.domain.data.RequestParams
 import com.kang6264.daumbooksearch.domain.usecase.SearchBookUseCase
 import com.kang6264.daumbooksearch.presentation.util.data
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 class PagingDataSource(
-    private val query: String,
-    //private val repository: Repository,
+    private val requestRequestParams: RequestParams,
     private val searchBookUseCase: SearchBookUseCase,
     private val viewModelScope: CoroutineScope
 ) : PageKeyedDataSource<Int, BookDocument>() {
@@ -23,8 +20,11 @@ class PagingDataSource(
     ) {
         viewModelScope.launch {
             try {
-                //repository.searchBookList(query, 1, params.requestedLoadSize).let {
-                searchBookUseCase(Params(query, 1, params.requestedLoadSize)).let {
+                val requestParams = requestRequestParams.apply {
+                    page = 1
+                    size = params.requestedLoadSize
+                }
+                searchBookUseCase(requestParams).let {
                     callback.onResult(it.data.documents, null, 2)
                 }
             } catch (exception: Exception) {
@@ -40,8 +40,11 @@ class PagingDataSource(
     override fun loadAfter(params: LoadParams<Int>, callback: LoadCallback<Int, BookDocument>) {
         viewModelScope.launch {
             try {
-                //repository.searchBookList(query, params.key, params.requestedLoadSize).let {
-                searchBookUseCase(Params(query, params.key, params.requestedLoadSize)).let {
+                val requestParams = requestRequestParams.apply {
+                    page = params.key
+                    size = params.requestedLoadSize
+                }
+                searchBookUseCase(requestParams).let {
                     callback.onResult(it.data.documents, params.key.plus(1))
                 }
             } catch (exception: Exception) {

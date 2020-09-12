@@ -1,4 +1,4 @@
-package com.kang6264.daumbooksearch.presentation.ui.search
+package com.kang6264.daumbooksearch.presentation.ui.search.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import com.kang6264.daumbooksearch.R
 import com.kang6264.daumbooksearch.data.response.BookDocument
-import com.kang6264.daumbooksearch.presentation.ui.search.BookDetailFragment
-import com.kang6264.daumbooksearch.presentation.ui.search.BookListFragment
+import com.kang6264.daumbooksearch.presentation.ui.search.detail.BookDetailFragment
+import com.kang6264.daumbooksearch.presentation.ui.search.home.BookListFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

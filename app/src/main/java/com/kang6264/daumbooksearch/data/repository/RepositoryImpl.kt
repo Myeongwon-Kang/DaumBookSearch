@@ -8,7 +8,13 @@ import javax.inject.Inject
 class RepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteDataSource
 ) : Repository {
-    override suspend fun searchBookList(query: String, page: Int, size: Int): BookResponse {
-        return remoteDataSource.searchBookList(query, page, size)
+    override suspend fun searchBookList(
+        query: String,
+        page: Int,
+        size: Int,
+        sort: String,
+        target: String
+    ): BookResponse {
+        return remoteDataSource.searchBookList(query, page, size, sort, target)
     }
 }
