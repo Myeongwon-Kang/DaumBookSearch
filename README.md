@@ -11,6 +11,9 @@
   * 메인 리스트와 상세 화면은 모두 Fragment로 구성
   * 메인 리스트에서 특정 Item(도서) 클릭시 상세화면으로 fragmnet로 이동
   
+## 실행방법
+  * 미리 빌드된 APK에 경우 DaumBookSearch/apk/ 폴더 안에 빌드된 APK포함
+  
 ## 과제수행 전략
 
 ### Package Structure
