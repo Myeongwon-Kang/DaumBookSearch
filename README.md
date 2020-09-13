@@ -66,6 +66,7 @@
 - Dagger Hilt
 - Coroutine
 - MVVM
+- DataBinding
 - Clean Architecture
 - Repository Pattern
 - Glide
@@ -79,3 +80,5 @@
  - [Dagger Hilt] (https://developer.android.com/training/dependency-injection/hilt-android)
  - [Coroutine+KTX] (https://developer.android.com/topic/libraries/architecture/coroutines?hl=ko)
  - [Coroutines] (https://github.com/Kotlin/kotlinx.coroutines)
+ - [Jetpack guide] (https://developer.android.com/jetpack/guide)
+ - [ViewPager2] (https://developer.android.com/jetpack/androidx/releases/viewpager2)
