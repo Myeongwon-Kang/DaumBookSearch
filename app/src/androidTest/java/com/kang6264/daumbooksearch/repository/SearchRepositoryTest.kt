@@ -21,8 +21,6 @@ class SearchRepositoryTest {
     @get:Rule
     val instantExecutorRule = InstantTaskExecutorRule()
 
-    private val testDispatcher = TestCoroutineDispatcher()
-
     @get:Rule
     var hiltRule = HiltAndroidRule(this)
 
@@ -32,13 +30,12 @@ class SearchRepositoryTest {
     @Before
     fun init() {
         hiltRule.inject()
-        Dispatchers.setMain(testDispatcher)
+
     }
 
     @After
     fun cleanUp(){
-        Dispatchers.resetMain()
-        testDispatcher.cleanupTestCoroutines()
+
     }
 
     @Test
