@@ -12,10 +12,11 @@
   * 메인 리스트에서 특정 Item(도서) 클릭시 상세화면으로 fragmnet로 이동
   
 ## 스크린샷
-|th | th | th|
-<img src="https://user-images.githubusercontent.com/10939456/93009706-2239e680-f5bf-11ea-8591-fdf4b15b694f.jpg" width="200px" height="440px">
-<img src="https://user-images.githubusercontent.com/10939456/93009709-2bc34e80-f5bf-11ea-89a3-38a236f1e5b7.jpg" width="200px" height="440px">
-<img src="https://user-images.githubusercontent.com/10939456/93009713-31b92f80-f5bf-11ea-9b25-0cb957e9968b.jpg" width="200px" height="440px">
+<p float="left">
+<img src="https://user-images.githubusercontent.com/10939456/93009706-2239e680-f5bf-11ea-8591-fdf4b15b694f.jpg" width="200px" height="440px"/>
+<img src="https://user-images.githubusercontent.com/10939456/93009709-2bc34e80-f5bf-11ea-89a3-38a236f1e5b7.jpg" width="200px" height="440px"/>
+<img src="https://user-images.githubusercontent.com/10939456/93009713-31b92f80-f5bf-11ea-9b25-0cb957e9968b.jpg" width="200px" height="440px"/>
+ </p>
   
 ## 실행방법
   * 미리 빌드된 APK에 경우 DaumBookSearch/apk/ 폴더 안에 빌드된 APK포함
