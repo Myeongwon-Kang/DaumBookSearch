@@ -51,6 +51,8 @@
 ```
 
 ### Architecture
+![Repository Pattern](https://developer.android.com/topic/libraries/architecture/images/final-architecture.png)
+
 ![screenshot_](https://user-images.githubusercontent.com/10939456/92988469-bf851400-f506-11ea-8c84-38345cabccef.png)
 
  * 이 앱의 경우 Clean Architecture, Repository Patter, MVVM으로 설계가 되었습니다.
