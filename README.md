@@ -30,11 +30,12 @@
 │        ├── usecase
 └── ├── presentation               ---------> # presentation layer
         ├── base
-        ├── pagingnation
+        ├── pagingnation           ---------> # paging
         ├── ui
         │   ├── search
-        │   │   ├── detail
-        │   │   ├── home
+        │   │   ├── detail        ---------> # search result detail
+        │   │   ├── home          ---------> # main
+        │   │   ├── info          ---------> # detail in tabFragment
         ├── util
     
 ```
