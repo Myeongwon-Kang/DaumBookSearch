@@ -24,6 +24,8 @@ class BookListViewModel @ViewModelInject constructor(
 ) : BaseViewModel() {
     private val SEARCH_RESULT_LIMIT = 50
 
+    lateinit var data : BookDocument
+
     val queryChannel = ConflatedBroadcastChannel<RequestParams>()
     val booksLiveData = initSearchListLiveData()
     private var _booksLiveData = MutableLiveData<PagingDataSource>()
