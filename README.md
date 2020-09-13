@@ -70,6 +70,7 @@
 - Repository Pattern
 - Glide
 - Retrofit
+- ViewPager2
 - Android Support Library(KTX, Android Paging ... etc)
 - Gson
 
