@@ -51,7 +51,7 @@
 ```
 
 ### Architecture
- * clean architecture
+ * my app clean architecture
 ![screenshot_](https://user-images.githubusercontent.com/10939456/92988469-bf851400-f506-11ea-8c84-38345cabccef.png)
 
  * Repository Pattern
